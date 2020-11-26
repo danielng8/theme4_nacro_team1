@@ -3,5 +3,7 @@ This is our project for 67-240: Mobile App Design and Development. Our team is t
 
 ## Team Members
 Sabrina Chua - sdchua
+
 Megan Lin - weitungl
+
 Daniel Ng - danielng
