@@ -12,6 +12,10 @@ main > .container {
   margin: 0px 20px;
 }
 
+.carousel-caption {
+  background-color: #00afefcc;
+}
+
 .footer {
   background-color: #dfdfdf;
 }

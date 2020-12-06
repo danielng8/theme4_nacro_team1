@@ -101,55 +101,52 @@
       <div class="container w-100">
 
         <style>
-        .filterDiv {
+          .filterDiv {
+            /*
+            float: left;
+            background-color: #2196F3;
+            color: #000000;
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin: 2px;
+            */
+            display: none;
+          }
+
+          .show {
+            display: block;
+          }
+
+          .container {
+            margin-top: 20px;
+            overflow: hidden;
+          }
+
+          /* Style the buttons */
           /*
-          float: left;
-          background-color: #2196F3;
-          color: #000000;
-          width: 100px;
-          line-height: 100px;
-          text-align: center;
-          margin: 2px;
+          .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+          }
+
+          .btn:hover {
+            background-color: #ddd;
+          }
+
+          .btn.active {
+            background-color: #666;
+            color: white;
+          }
           */
-          display: none;
-        }
-
-        .show {
-          display: block;
-        }
-
-        .container {
-          margin-top: 20px;
-          overflow: hidden;
-        }
-
-        /* Style the buttons */
-        /*
-        .btn {
-          border: none;
-          outline: none;
-          padding: 12px 16px;
-          background-color: #f1f1f1;
-          cursor: pointer;
-        }
-
-        .btn:hover {
-          background-color: #ddd;
-        }
-
-        .btn.active {
-          background-color: #666;
-          color: white;
-        }
-        */
-
-        #featured {
-          margin-top: 20px;
-        }
+          #featured {
+            margin-top: 20px;
+          }
         </style>
-        <body>
-          
-
+        
           <!--Featured Card-->
           <div class="row justify-content-center my-3">
             <h1>Upcoming Events</h1> 
@@ -286,6 +283,7 @@
                       Webinar: What is a Big Ideas Initiative? Aligning Industry Priorities with Fundraising Campaigns
                       <br/>
                       <small><span class="badge badge-pill badge-secondary">Virtual</span></small>
+                      <small><span class="badge badge-pill badge-secondary">Member-Only</span></small>
                     </h5>
                     <a href="#" class="btn btn-primary mt-3">Register</a>
                   </div>
@@ -309,8 +307,6 @@
         </nav>
 
       <script type="text/javascript" src="js/upcomingFilter.js"></script>
-    
-</body>
     </main>
 
     <footer class="footer mt-auto py-3">
