@@ -7,12 +7,20 @@ main > .container {
 }
 
 .footer {
-  background-color: #dfdfdf;
+  background-color: #0000ff;
 }
 
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.moc {
+  padding: 0px 0px 0px 8px;
+}
+
+.startImage {
+  height: 650px;
 }
 
 .logo {
