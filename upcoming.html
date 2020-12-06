@@ -97,223 +97,219 @@
     </header>
 
     <main>
-        <div class="container w-100">
+      <div class="container w-100">
 
-            <style>
-                
-            .filterDiv {
-              /*
-              float: left;
-              background-color: #2196F3;
-              color: #000000;
-              width: 100px;
-              line-height: 100px;
-              text-align: center;
-              margin: 2px;
-              */
-              display: none;
-            }
+        <style>
+        .filterDiv {
+          /*
+          float: left;
+          background-color: #2196F3;
+          color: #000000;
+          width: 100px;
+          line-height: 100px;
+          text-align: center;
+          margin: 2px;
+          */
+          display: none;
+        }
 
-            .show {
-              display: block;
-            }
+        .show {
+          display: block;
+        }
 
-            .container {
-              margin-top: 20px;
-              overflow: hidden;
-            }
+        .container {
+          margin-top: 20px;
+          overflow: hidden;
+        }
 
-            /* Style the buttons */
-            /*
-            .btn {
+        /* Style the buttons */
+        /*
+        .btn {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: #f1f1f1;
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          background-color: #ddd;
+        }
+
+        .btn.active {
+          background-color: #666;
+          color: white;
+        }
+        */
+
+        #featured {
+          margin-top: 20px;
+        }
+        </style>
+        <body>
+          
+
+        <!--Featured Card-->
+        <h2>Upcoming Events</h2>
+          <div class="card mb-3" id = "featured">
+            <div class="row no-gutters">
+              <div class="col-md-4 mx-auto">
+                <img src="img/feature.png" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Member Meet-Up: Is this a Scavenger Hunt</h5>
+                  <p class="card-text">December 23, 4pm EDT</p>
+                  <p class="card-text">The purpose of this session is to provide insight and guidance to people while they are working to respond to NACRO’s first Gold Standards Financial Metrics Survey.
+                  </p>
+                  <p class="card-text">Speakers: Audrey Metcalf & Charles Hasemann</p>
+                  <a href="#" class="btn btn-primary">Register</a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <!--Filter Button-->
+          <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">Filter</button>
+              <div id="myDropdown" class="dropdown-content myBtnContainer">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <div class="form-check" onclick="filterSelection('all')">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Show All
+                  </label>
+                </div>
+                <div class="form-check" onclick="filterSelection('member-only')">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Member-Only Events
+                  </label>
+                </div>
+                <div class="form-check" onclick="filterSelection('public')">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Public Events
+                  </label>
+                </div>
+                <div class="form-check"onclick="filterSelection('virtual-events')">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                  <label class="form-check-label" for="exampleRadios3">
+                    Virtual Events
+                  </label>
+                </div>
+              </div>
+            </div>
+          <style>
+            /* Dropdown Button */
+            .dropbtn {
+              background-color: #4CAF50;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
               border: none;
-              outline: none;
-              padding: 12px 16px;
-              background-color: #f1f1f1;
               cursor: pointer;
             }
-
-            .btn:hover {
-              background-color: #ddd;
-            }
-
-            .btn.active {
-              background-color: #666;
-              color: white;
-            }
-            */
-
-            #featured {
-              margin-top: 20px;
-            }
-            </style>
-            <body>
             
-
-          <!--Featured Card-->
-          <h2>Upcoming Events</h2>
-            <div class="card mb-3" id = "featured">
-              <div class="row no-gutters">
-                <div class="col-md-4 mx-auto">
-                  <img src="img/feature.png" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Member Meet-Up: Is this a Scavenger Hunt</h5>
-                    <p class="card-text">December 23, 4pm EDT</p>
-                    <p class="card-text">The purpose of this session is to provide insight and guidance to people while they are working to respond to NACRO’s first Gold Standards Financial Metrics Survey.
-                    </p>
-                    <p class="card-text">Speakers: Audrey Metcalf & Charles Hasemann</p>
-                    <a href="#" class="btn btn-primary">Register</a>
-                    
-                  </div>
+            /* Dropdown button on hover & focus */
+            .dropbtn:hover, .dropbtn:focus {
+              background-color: #3e8e41;
+            }
+            
+            /* The search field */
+            #myInput {
+              box-sizing: border-box;
+              background-image: url('searchicon.png');
+              background-position: 14px 12px;
+              background-repeat: no-repeat;
+              font-size: 16px;
+              padding: 14px 20px 12px 45px;
+              border: none;
+              border-bottom: 1px solid #ddd;
+            }
+            
+            /* The search field when it gets focus/clicked on */
+            #myInput:focus {outline: 3px solid #ddd;}
+            
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+            
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f6f6f6;
+              min-width: 230px;
+              border: 1px solid #ddd;
+              z-index: 1;
+            }
+            
+            /* Links inside the dropdown */
+            .dropdown-content button {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+            
+            /* Change color of dropdown links on hover */
+            .dropdown-content button:hover {background-color: #f1f1f1}
+            
+            /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+            .show {display:block;}
+          </style>
+        
+        <!--Smaller Cards-->
+          <div class="container">
+              <div class="row row-cols-1 row-cols-md-3 ">
+                <div class="filterDiv member-only" >
+                    <div class="col mb-4 ">
+                      <div class="card h-100">
+                        <img src="img/card1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Corporate Workshop Series Session 1: Adjusting to the New Normal: University-Corporate Relations in the Changing Landscape</h5>
+                          <p class="card-text">August 11, 12:00 pm EDT</p>
+                          <a href="#" class="btn btn-primary">Register</a>
+                        </div>
+                      </div>
+                    </div>
+                </div> 
+                <div class="filterDiv public" >
+                    <div class="col mb-4">
+                      <div class="card h-100">
+                        <img src="img/card2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Corporate Workshop Series Session 2: It’s Not Enough: Increasing Diversity & Inclusion Programming on Campus</h5>
+                          <p class="card-text">September 9, 11:00 am EDT</p>
+                          <a href="#" class="btn btn-primary">Register</a>
+                        </div>
+                      </div>
+                    </div>
+                </div> 
+                <div class="filterDiv member-only virtual-events">
+                    <div class="col mb-4">
+                      <div class="card h-100">
+                        <img src="img/card3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Webinar: What is a Big Ideas Initiative? Aligning Industry Priorities with Fundraising Campaigns</h5>
+                          <p class="card-text">December 8, 3:00 pm EDT</p>
+                          <a href="#" class="btn btn-primary">Register</a>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
-            </div>
-            
-
-            <!--Filter Button-->
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Filter</button>
-                <div id="myDropdown" class="dropdown-content myBtnContainer">
-                  <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                  <div class="form-check" onclick="filterSelection('all')">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                      Show All
-                    </label>
-                  </div>
-                  <div class="form-check" onclick="filterSelection('member-only')">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                      Member-Only Events
-                    </label>
-                  </div>
-                  <div class="form-check" onclick="filterSelection('public')">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                      Public Events
-                    </label>
-                  </div>
-                  <div class="form-check"onclick="filterSelection('virtual-events')">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
-                      Virtual Events
-                    </label>
-                  </div>
-                </div>
-              </div>
-            <style>
-              /* Dropdown Button */
-              .dropbtn {
-                background-color: #4CAF50;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-                cursor: pointer;
-              }
-              
-              /* Dropdown button on hover & focus */
-              .dropbtn:hover, .dropbtn:focus {
-                background-color: #3e8e41;
-              }
-              
-              /* The search field */
-              #myInput {
-                box-sizing: border-box;
-                background-image: url('searchicon.png');
-                background-position: 14px 12px;
-                background-repeat: no-repeat;
-                font-size: 16px;
-                padding: 14px 20px 12px 45px;
-                border: none;
-                border-bottom: 1px solid #ddd;
-              }
-              
-              /* The search field when it gets focus/clicked on */
-              #myInput:focus {outline: 3px solid #ddd;}
-              
-              /* The container <div> - needed to position the dropdown content */
-              .dropdown {
-                position: relative;
-                display: inline-block;
-              }
-              
-              /* Dropdown Content (Hidden by Default) */
-              .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #f6f6f6;
-                min-width: 230px;
-                border: 1px solid #ddd;
-                z-index: 1;
-              }
-              
-              /* Links inside the dropdown */
-              .dropdown-content button {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-              }
-              
-              /* Change color of dropdown links on hover */
-              .dropdown-content button:hover {background-color: #f1f1f1}
-              
-              /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-              .show {display:block;}
-            </style>
-
-            <script type="text/javascript" src="js/upcomingFilter.js"></script>
-
-          
-          
-          <!--Smaller Cards-->
-            <div class="container">
-                <div class="row row-cols-1 row-cols-md-3 ">
-                  <div class="filterDiv member-only" >
-                      <div class="col mb-4 ">
-                        <div class="card h-100">
-                          <img src="img/card1.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Corporate Workshop Series Session 1: Adjusting to the New Normal: University-Corporate Relations in the Changing Landscape</h5>
-                            <p class="card-text">August 11, 12:00 pm EDT</p>
-                            <a href="#" class="btn btn-primary">Register</a>
-                          </div>
-                        </div>
-                      </div>
-                  </div> 
-                  <div class="filterDiv public" >
-                      <div class="col mb-4">
-                        <div class="card h-100">
-                          <img src="img/card2.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Corporate Workshop Series Session 2: It’s Not Enough: Increasing Diversity & Inclusion Programming on Campus</h5>
-                            <p class="card-text">September 9, 11:00 am EDT</p>
-                            <a href="#" class="btn btn-primary">Register</a>
-                          </div>
-                        </div>
-                      </div>
-                  </div> 
-                  <div class="filterDiv member-only virtual-events" >
-                      <div class="col mb-4">
-                        <div class="card h-100">
-                          <img src="img/card3.png" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Webinar: What is a Big Ideas Initiative? Aligning Industry Priorities with Fundraising Campaigns</h5>
-                            <p class="card-text">December 8, 3:00 pm EDT</p>
-                            <a href="#" class="btn btn-primary">Register</a>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-</body>
+          </div>
+      </div>
+      <script type="text/javascript" src="js/upcomingFilter.js"></script>
+      
+      </body>
     </main>
-
 
     <footer class="footer mt-auto py-3">
       <div class="container">
