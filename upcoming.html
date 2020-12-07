@@ -152,31 +152,35 @@
             <h1>Upcoming Events</h1> 
           </div>
           
-            <div class="card mb-3" id = "featured">
-              <div class="row no-gutters">
-                <div class="col-md-4 mx-auto">
-                  <img src="img/feature.png" class="card-img h-100 p-3" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Member Meet-Up: Is this a Scavenger Hunt
-                      <small><span class="badge badge-pill badge-secondary">Member-Only</span></small>
-                    </h5>
-                    <p class="card-text">December 23, 4:00 pm EDT</p>
-                    <p class="card-text">The purpose of this session is to provide insight and guidance to people while they are working to respond to NACRO’s first Gold Standards Financial Metrics Survey.
-                    </p>
-                    <p class="card-text">Speakers: Audrey Metcalf & Charles Hasemann</p>
-                    <a href="#" class="btn btn-primary">Register</a>
-                    
+          <div class="container justify-content-center my-3">
+            <div class="row justify-content-center mx-3">
+              <div class="card mb-3" id ="featured">
+                <div class="row no-gutters">
+                  <div class="col-md-4 mx-auto">
+                    <img src="img/feature.png" class="card-img h-100 p-3" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Member Meet-Up: Is this a Scavenger Hunt
+                        <small><span class="badge badge-pill badge-secondary">Member-Only</span></small>
+                      </h5>
+                      <p class="card-text">December 23, 4:00 pm EDT</p>
+                      <p class="card-text">The purpose of this session is to provide insight and guidance to people while they are working to respond to NACRO’s first Gold Standards Financial Metrics Survey.
+                      </p>
+                      <p class="card-text">Speakers: Audrey Metcalf & Charles Hasemann</p>
+                      <a href="#" class="btn btn-primary">Register</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          
+          </div>
 
-            <!--Filter Button-->
-            <div class="dropdown">
+          <div class="container justify-content-start my-3">
+            <div class="row justify-content-start mx-3">
+              <!--Filter Button-->
+              <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn btn-secondary">Filter</button>
                 <div id="myDropdown" class="dropdown-content myBtnContainer py-3 px-3">
                   <div class="form-check" onclick="filterSelection('all')">
@@ -205,6 +209,11 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          
+
+
             
             <style>
               /* Dropdown Button */
@@ -299,39 +308,47 @@
 
         <div class="container justify-content-center my-3">
           <div class="row justify-content-start row-cols-1 row-cols-sm-2 row-cols-md-3 mx-3">
-            <div class="card filterDiv member-only col">
+            <div class="col filterDiv member-only my-3">
+              <div class="card h-100">
+                  <div class="card-body">
+                    <p class="card-text">August 11, 12:00 pm EDT</p>
+                    <h5 class="card-title">
+                      Corporate Workshop Series Session 1: Adjusting to the New Normal: University-Corporate Relations in the Changing Landscape 
+                      <small><span class="badge badge-pill badge-secondary">Member-Only</span></small>
+                    </h5>
+                    <a href="#" class="btn btn-primary mt-3">Register</a>
+                  </div>
+                  <img src="img/card1.png" class="card-img-bottom mb-0" alt="Card Image Cap">
+              </div>
+            </div> 
+            <div class="col filterDiv public my-3">
+              <div class="card h-100">
                 <div class="card-body">
-                  <p class="card-text">August 11, 12:00 pm EDT</p>
+                  <p class="card-text">September 9, 11:00 am EDT</p>
                   <h5 class="card-title">
-                    Corporate Workshop Series Session 1: Adjusting to the New Normal: University-Corporate Relations in the Changing Landscape 
-                    <small><span class="badge badge-pill badge-secondary">Member-Only</span></small>
+                    Corporate Workshop Series Session 2: It’s Not Enough: Increasing Diversity & Inclusion Programming on Campus
+                    <small><span class="badge badge-pill badge-secondary">Public</span></small>
                   </h5>
+                  <br/>
                   <a href="#" class="btn btn-primary mt-3">Register</a>
                 </div>
-                <img src="img/card1.png" class="card-img-bottom mb-0" alt="Card Image Cap">
-            </div>
-            <div class="card filterDiv public col">
-              <div class="card-body">
-                <p class="card-text">September 9, 11:00 am EDT</p>
-                <h5 class="card-title">
-                  Corporate Workshop Series Session 2: It’s Not Enough: Increasing Diversity & Inclusion Programming on Campus
-                  <small><span class="badge badge-pill badge-secondary">Public</span></small>
-                </h5>
-                <a href="#" class="btn btn-primary mt-3">Register</a>
+                <img src="img/card2.png" class="card-img-bottom mb-0" alt="Card Image Cap">
               </div>
-              <img src="img/card2.png" class="card-img-bottom mb-0" alt="Card Image Cap">
             </div>
-            <div class="card filterDiv member-only virtual-events col">
-              <div class="card-body">
-                <p class="card-text">December 8, 3:00 pm EDT</p>
-                <h5 class="card-title">
-                  Webinar: What is a Big Ideas Initiative? Aligning Industry Priorities with Fundraising Campaigns
-                  <small><span class="badge badge-pill badge-secondary">Virtual</span></small>
-                  <small><span class="badge badge-pill badge-secondary">Member-Only</span></small>
-                </h5>
-                <a href="#" class="btn btn-primary mt-3">Register</a>
+            <div class="col filterDiv member-only virtual-events my-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <p class="card-text">December 8, 3:00 pm EDT</p>
+                  <h5 class="card-title">
+                    Webinar: What is a Big Ideas Initiative? Aligning Industry Priorities with Fundraising Campaigns
+                    <small><span class="badge badge-pill badge-secondary">Virtual</span></small>
+                    <small><span class="badge badge-pill badge-secondary">Member-Only</span></small>
+                  </h5>
+                  <br/>
+                  <a href="#" class="btn btn-primary mt-3">Register</a>
+                </div>
+                <img src="img/card3.png" class="card-img-bottom mb-0" alt="Card Image Cap">
               </div>
-              <img src="img/card3.png" class="card-img-bottom mb-0" alt="Card Image Cap">
             </div>
           </div>
         </div>
