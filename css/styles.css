@@ -30,7 +30,11 @@ main > .container {
 }
 
 .startImage {
-  height: 575px;
+  max-height: 575px;
+}
+
+.highlightImg {
+  max-height: 100%;
 }
 
 .logo {
